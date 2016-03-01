@@ -1,0 +1,9 @@
+a:5:{i:0;s:334:"Error in file: "/home/attivanutry/public_html/app/code/community/PedroTeixeira/Correios/sql/pedroteixeira_correios_setup/install-4.5.0.php" - SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'pedroteixeira_correios_setup' for key 'PRIMARY', query was: INSERT INTO `core_resource` (`code`, `version`) VALUES (?, ?)";i:1;s:988:"#0 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/Resource/Setup.php(645): Mage::exception('Mage_Core', 'Error in file: ...')
+#1 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/Resource/Setup.php(421): Mage_Core_Model_Resource_Setup->_modifyResourceDb('install', '', '4.5.0')
+#2 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/Resource/Setup.php(327): Mage_Core_Model_Resource_Setup->_installResourceDb('4.5.0')
+#3 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/Resource/Setup.php(235): Mage_Core_Model_Resource_Setup->applyUpdates()
+#4 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/App.php(417): Mage_Core_Model_Resource_Setup::applyAllUpdates()
+#5 /home/attivanutry/public_html/app/code/core/Mage/Core/Model/App.php(343): Mage_Core_Model_App->_initModules()
+#6 /home/attivanutry/public_html/app/Mage.php(684): Mage_Core_Model_App->run(Array)
+#7 /home/attivanutry/public_html/index.php(87): Mage::run('', 'store')
+#8 {main}";s:3:"url";s:47:"/~attivanutry/index.php/catalogsearch/advanced/";s:11:"script_name";s:23:"/~attivanutry/index.php";s:4:"skin";s:7:"default";}

@@ -1,0 +1,21 @@
+/**
+ * EMThemes
+ *
+ * @license commercial software
+ * @copyright (c) 2012 Codespot Software JSC - EMThemes.com. (http://www.emthemes.com)
+ */
+.galarainbow_general_page_bg_image img,.galarainbow_header_h_bg_image img, .galarainbow_body_bd_bg_image img, .galarainbow_footer_f_bg_image img { width:30px; height:30px; border:2px solid #ffffff }
+.galarainbow_general_page_bg_image:hover img,
+.galarainbow_general_page_bg_image.selected img,
+.galarainbow_header_h_bg_image:hover img,
+.galarainbow_header_h_bg_image.selected img,
+.galarainbow_body_bd_bg_image:hover img,
+.galarainbow_body_bd_bg_image.selected img,
+.galarainbow_footer_f_bg_image:hover img,
+.galarainbow_footer_f_bg_image.selected img { border:2px solid #000000 }
+
+.color_pattern { display:inline-block; width:10px; height:10px; vertical-align:text-bottom; border:1px solid #333; }
+#row_galarainbow_menu_tm_label .scope-label, #row_galarainbow_menu_dm_label .scope-label, #row_galarainbow_button_btn1_label .scope-label, #row_galarainbow_button_btn2_label .scope-label, #row_galarainbow_button_btn3_label .scope-label, #row_galarainbow_button_btn4_label .scope-label{display:none}
+#row_galarainbow_menu_tm_label, #row_galarainbow_menu_dm_label, #row_galarainbow_button_btn1_label, #row_galarainbow_button_btn2_label, #row_galarainbow_button_btn3_label, #row_galarainbow_button_btn4_label{font-weight:bold;margin-left: 0!important;margin-bottom:10px; border-bottom: 1px solid #3d3d3d;}
+#rainbow_menu tr, #rainbow_button tr {display: inline-block; margin-left:40px;}
+label[for=galarainbow_menu_tm_label],label[for=galarainbow_menu_dm_label], label[for=galarainbow_button_btn1_label],label[for=galarainbow_button_btn2_label], label[for=galarainbow_button_btn3_label],label[for=galarainbow_button_btn4_label]{color:red;font-size:15px;}

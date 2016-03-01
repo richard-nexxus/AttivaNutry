@@ -1,0 +1,1784 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category	Mage
+ * @package		Mage_Reports
+ * @copyright	Copyright (c) 2010 Magento Inc. (http://www.magentocommerce.com)
+ * @license		http://opensource.org/licenses/afl-3.0.php	Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <tabs>
+        <galathemes translate="label" module="rainbowsettings">
+          <label>GALA THEME</label>
+          <sort_order>0</sort_order>
+        </galathemes>
+    </tabs>
+	<sections>
+		<galarainbow translate="label" module="rainbowsettings">
+			<label>Gala Rainbow Settings</label>
+			<tab>galathemes</tab>
+			<frontend_type>text</frontend_type>
+			<frontend_model>rainbowsettings/adminhtml_system_config_form</frontend_model>
+			<sort_order>1000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			 <groups>
+				<general translate="label">
+					<label>General Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>0</sort_order>
+					<fields>
+						<disable_default_nav translabel="label, comment">
+							<label>Disable default navigation</label>
+							<comment><![CDATA[<strong>If using EM MegaMenuPro, default catalog navigation should be disabled. If EM MageMenuPro isn't install, default catalog navigation is always enable </strong>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</disable_default_nav>
+						<freezed_top_menu translabel="label, comment">
+							<label>Freezed Top Menu</label>
+							<comment><![CDATA[<strong>Make the menu on top while scrolling</strong>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</freezed_top_menu>
+						<disable_frontend_variation>
+							<label>Disable Variation block on frontend</label>
+							<comment><![CDATA[<strong>Display the variation module on frontend.</strong> For theme demonstration purpose.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</disable_frontend_variation>
+                        <disable_footer_links>
+							<label>Remove footer links</label>
+							<comment><![CDATA[<strong>Remove the default Magento footer links: Site Map, Search Terms, Advanced Search, Orders and Returns, Contact Us</strong>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+						</disable_footer_links>                        
+                        <box_wide>
+							<label>Box/Wide Mode</label>
+							<comment><![CDATA[Default: Wide]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>rainbowsettings/config_boxwide</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+						</box_wide>
+                        <wideslide_full>
+							<label>Fullwidth Main Slideshow In Wide Mode</label>
+							<comment><![CDATA[<strong>Fullwidth Main Slideshow In Wide Mode.</strong>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</wideslide_full>                        
+                        <p_bg_color translabel="label, comment">
+                            <label>Page Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>70</sort_order>
+                        </p_bg_color>
+                        <!-- Page Bg -->
+						<page_bg_image>
+							<label>Page Background Pattern</label>
+							<comment><![CDATA[<strong>Specify background pattern image.</strong>]]></comment>
+							<frontend_type>hidden</frontend_type>
+							<frontend_model>rainbowsettings/adminhtml_system_config_form_field_stripes</frontend_model>
+							<source_model>rainbowsettings/config_stripes</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+						</page_bg_image>						
+						<page_bg_file>
+							<label>Upload Page Background Image</label>
+							<comment><![CDATA[<strong>Upload your custom page background image</strong> instead of selecting above background pattern]]></comment>
+							<frontend_type>file</frontend_type>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">background</upload_dir> 
+							<base_url type="media" scope_info="1">background</base_url>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+						</page_bg_file>                        
+                        <page_bg_position translabel="label, comment">
+                            <label>Page Background Position</label>
+        					<comment><![CDATA[<strong>Property Values: left top, left center, left bottom,right top, right center, right bottom,center top,center center,center bottom,x% y%, xpos ypos, inherit</strong><br/>Default: 0 0 ]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </page_bg_position>
+                        <page_bg_repeat translabel="label, comment">
+                            <label>Page Background Repeat</label>
+        					<comment><![CDATA[<strong>Property Values: repeat, repeat-x, repeat-y, no-repeat, inherit</strong><br/>Default: repeat]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>110</sort_order>
+                        </page_bg_repeat>					
+					</fields>
+				</general>
+
+                <typography translate="label">
+					<label>Typography Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>10</sort_order>
+					<fields>
+                        <!-- Font -->
+						<google_fonts translate="label comment">
+							<label>Import Google Fonts</label>
+							<comment><![CDATA[<strong>Select which google fonts should be imported to your site.</strong> Hold SHIFT + left click a font to multiple select.]]></comment>
+							<frontend_type>multiselect</frontend_type>
+							<frontend_model>rainbowsettings/adminhtml_system_config_form_field_font</frontend_model>
+							<source_model>rainbowsettings/config_font</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<can_be_empty>1</can_be_empty>
+							<sort_order>10</sort_order>
+						</google_fonts>
+
+                        <google_fonts_weights>
+							<label>Google Fonts' Weights</label>
+							<comment><![CDATA[<strong>Google Font's weights to be imported to your site</strong>. i.e. 200,400,600,800]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</google_fonts_weights>
+
+						<general_font translate="label comment">
+							<label>General Font</label>
+							<comment><![CDATA[<strong>Font for body, content, text...</strong><br/>Default: <span style="font:normal 12px/1.35 Arial,Helvetica,sans-serif">normal 12px/1.35 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</general_font>
+
+						<h1_font translate="label comment">
+							<label>H1 Font</label>
+							<comment><![CDATA[<strong>Font of H1 element and other similar h1 heading.</strong><br/>Default: <span style="font:normal 24px/1.15 Arial,Helvetica,sans-serif">normal 24px/1.15 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+						</h1_font>
+
+						<h2_font translate="label comment">
+							<label>H2 Font</label>
+							<comment><![CDATA[<strong>Font of H2 element and other similar h2 heading.</strong><br/>Default: <span style="font:normal 22px/1.25 Arial,Helvetica,sans-serif">normal 22px/1.25 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+						</h2_font>
+
+						<h3_font translate="label comment">
+							<label>H3 Font</label>
+							<comment><![CDATA[<strong>Font of H3 element and other similar h3 heading.</strong><br/>Default: <span style="font:normal 18px/1.25 Arial,Helvetica,sans-serif">normal 20px/1.25 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</h3_font>
+
+						<h4_font translate="label comment">
+							<label>H4 Font</label>
+							<comment><![CDATA[<strong>Font of H4 element and other similar h4 heading.</strong><br/>Default: <span style="font:normal 16px/1.35 Arial,Helvetica,sans-serif">normal 18px/1.35 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>70</sort_order>
+						</h4_font>
+
+						<h5_font translate="label comment">
+							<label>H5 Font</label>
+							<comment><![CDATA[<strong>Font of H5 element and other similar h5 heading.</strong><br/>Default: <span style="font:normal 14px/1.35 Arial,Helvetica,sans-serif">normal 16px/1.35 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+						</h5_font>
+
+                        <h6_font translate="label comment">
+							<label>H6 Font</label>
+							<comment><![CDATA[<strong>Font of H6 element and other similar h6 heading.</strong><br/>Default: <span style="font:normal 12px/1.35 Arial,Helvetica,sans-serif">normal 14px/1.35 Arial,Helvetica,sans-serif</span>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+						</h6_font>
+
+                        <additional_css_file translate="label comment">
+							<label>Additional CSS File(s)</label>
+							<comment><![CDATA[<strong>Add custom css file name.</strong><br/> File must locate in the same folder of theme.css (skin/frontend/default/galarainbow/css/). Multiple files separated by a comma (,).<br/>File <strong>custom1.css</strong> and <strong>custom2.css</strong> are 2 examples provided in this theme. You can create your own file as well. <br/>E.g.: custom1.css<br/>E.g.: custom1.css,custom1plus.css]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>100</sort_order>
+						</additional_css_file>
+
+						<custom_css>
+							<label>Your Custom CSS</label>
+							<comment><![CDATA[<strong>Add your custom CSS</strong> in addition to the Addition CSS File]]></comment>
+							<frontend_type>textarea</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>110</sort_order>
+						</custom_css>
+					</fields>
+				</typography>
+
+				<header translate="label">
+                    <label>Header Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>  
+					<sort_order>20</sort_order>
+					<fields>
+                        <h_text_color translabel="label, comment">
+                            <label>Header Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in header<br/> Default: #aaaaaa <span class="color_pattern" style="background-color:#aaaaaa"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>10</sort_order>
+                        </h_text_color>
+                        <h_text2_color translabel="label, comment">
+                            <label>Header Text 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default color used in text hover/active<br/>Default: #fb687b <span class="color_pattern" style="background-color:#fb687b"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>20</sort_order>
+                        </h_text2_color>
+						<h_text3_color translabel="label, comment">
+                            <label>Header Text 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color in title<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>30</sort_order>
+                        </h_text3_color>
+						<h_text4_color translabel="label, comment">
+                            <label>Header Text 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color in title dropdown cart<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>31</sort_order>
+                        </h_text4_color>
+						<h_text5_color translabel="label, comment">
+                            <label>Header Text 5 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color in text free account<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>32</sort_order>
+                        </h_text5_color>
+                        <h_bg_color translabel="label, comment">
+                            <label>Header Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in header. <br/>Default: #ffffff <span class="color_pattern" style="background-color:#fffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>40</sort_order>
+                        </h_bg_color>
+						<h_bg2_color translabel="label, comment">
+                            <label>Header Background 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in top header. <br/>Default: #ffffff <span class="color_pattern" style="background-color:#fffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>41</sort_order>
+                        </h_bg2_color>
+						<h_bg3_color translabel="label, comment">
+                            <label>Header Background 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in header search. <br/>Default: #fafafa <span class="color_pattern" style="background-color:#fafafa"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>42</sort_order>
+                        </h_bg3_color>
+						<h_bg4_color translabel="label, comment">
+                            <label>Header Background 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in title cart. <br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>43</sort_order>
+                        </h_bg4_color>
+                        <h_line_color translabel="label, comment">
+                            <label>Header Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in header <br/>Default: #cfcfcf <span class="color_pattern" style="background-color:#cfcfcf"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>50</sort_order>
+                        </h_line_color>
+						<h_line2_color translabel="label, comment">
+                            <label>Header Line 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in dropdown cart<br/>Default: #6ad98a <span class="color_pattern" style="background-color:#6ad98a"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>60</sort_order>
+                        </h_line2_color>
+						<h_line3_color translabel="label, comment">
+                            <label>Header Line 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in search<br/>Default: #cfcfcf <span class="color_pattern" style="background-color:#cfcfcf"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>61</sort_order>
+                        </h_line3_color>
+                        <h_bg_image translabel="label, comment">
+                            <label>Header Background Pattern</label>
+    						<comment><![CDATA[<strong>Specify background pattern image.</strong>]]></comment>
+    						<frontend_type>hidden</frontend_type>
+    						<frontend_model>rainbowsettings/adminhtml_system_config_form_field_stripes</frontend_model>
+    						<source_model>rainbowsettings/config_stripes</source_model>
+    						<show_in_default>1</show_in_default>
+    						<show_in_website>1</show_in_website>
+    						<show_in_store>1</show_in_store>
+    						<sort_order>70</sort_order>
+                        </h_bg_image>
+                        <h_bg_file translabel="label, comment">
+                            <label>Upload Header Background Image</label>
+    						<comment><![CDATA[<strong>Upload your custom header background image</strong> instead of selecting above background pattern]]></comment>
+    						<frontend_type>file</frontend_type>
+    						<backend_model>adminhtml/system_config_backend_file</backend_model>
+    						<upload_dir config="system/filesystem/media" scope_info="1">background</upload_dir> 
+    						<base_url type="media" scope_info="1">background</base_url>
+    						<show_in_default>1</show_in_default>
+    						<show_in_website>1</show_in_website>
+    						<show_in_store>1</show_in_store>
+    						<sort_order>80</sort_order>
+                        </h_bg_file>
+                        <h_bg_position translabel="label, comment">
+                            <label>Header Background Position</label>
+        					<comment><![CDATA[<strong>Property Values: left top, left center, left bottom,right top, right center, right bottom,center top,center center,center bottom,x% y%, xpos ypos, inherit</strong><br/>Default: 0 0 ]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>90</sort_order>
+                        </h_bg_position>
+                        <h_bg_repeat translabel="label, comment">
+                            <label>Header Background Repeat</label>
+        					<comment><![CDATA[<strong>Property Values: repeat, repeat-x, repeat-y, no-repeat, inherit</strong><br/>Default: repeat]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </h_bg_repeat>
+                    </fields>
+                </header>
+
+                <menu translate="label">
+                    <label>Menu Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>30</sort_order>
+                    <fields>
+                        <tm_label translabel="label, comment">
+                            <label>Top Menu</label>
+        					<frontend_type>label</frontend_type>
+        					<frontend_class>tm_label</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>10</sort_order>
+                        </tm_label>
+                        <tm_bg_color translabel="label, comment">
+                            <label>Top Menu Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #fb687b <span class="color_pattern" style="background-color:#fb687b"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>20</sort_order>
+                        </tm_bg_color>
+                        <tm_hover_bg_color translabel="label, comment">
+                            <label>Top Menu Hover Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>30</sort_order>
+                        </tm_hover_bg_color>
+                        <tm_text_color translabel="label, comment">
+                            <label>Top Menu Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>40</sort_order>
+                        </tm_text_color>
+                        <tm_hover_text_color translabel="label, comment">
+                            <label>Top Menu Hover Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>50</sort_order>
+                        </tm_hover_text_color>
+                        <tm_line_color translabel="label, comment">
+                            <label>Top Menu Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #f14c61 <span class="color_pattern" style="background-color:#f14c61"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>60</sort_order>
+                        </tm_line_color>
+						 <tm_line2_color translabel="label, comment">
+                            <label>Top Menu Line 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>61</sort_order>
+                        </tm_line2_color>
+                        <tm_font translabel="label, comment">
+                            <label>Top Menu Font</label>
+        					<comment><![CDATA[Default: normal 13px/1.35 Arial,Helvetica,sans-serif]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>70</sort_order>
+                        </tm_font>
+
+                        <dm_label translabel="label, comment">
+                            <label>Dropdown Menu</label>
+        					<frontend_type>label</frontend_type>
+        					<frontend_class>tm_label</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>80</sort_order>
+                        </dm_label>
+                        <dm_bg_color translabel="label, comment">
+                            <label>Dropdown Menu Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #fff <span class="color_pattern" style="background-color:#fff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>90</sort_order>
+                        </dm_bg_color>
+                        <dm_text_color translabel="label, comment">
+                            <label>Dropdown Menu Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in normal text.<br/>Default: #555555 <span class="color_pattern" style="background-color:#555555"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </dm_text_color>
+                        <dm_text2_color translabel="label, comment">
+                            <label>Dropdown Menu Text 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in hover/active text.<br/>Default: #fb687b <span class="color_pattern" style="background-color:#fb687b"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>110</sort_order>
+                        </dm_text2_color>
+						<dm_text3_color translabel="label, comment">
+                            <label>Dropdown Menu Text 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in title link.<br/>Default: #191919 <span class="color_pattern" style="background-color:#191919"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>120</sort_order>
+                        </dm_text3_color>
+                        <dm_font translabel="label, comment">
+                            <label>Dropdown Menu Font</label>
+        					<comment><![CDATA[Default: normal 12px/1.35 Arial,Helvetica,sans-serif]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>140</sort_order>
+                        </dm_font>
+                    </fields>
+                </menu>
+
+                <body translate="label">
+                    <label>Body Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>  
+					<sort_order>40</sort_order>
+                    <fields>
+                        <bd_bg_color translabel="label, comment">
+                            <label>Body Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in body.<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>10</sort_order>
+                        </bd_bg_color>
+                        <bd_bg2_color translabel="label, comment">
+                            <label>Body Background 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in title tab...<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>20</sort_order>
+                        </bd_bg2_color>
+                        <bd_bg3_color translabel="label, comment">
+                            <label>Body Background 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in block shop by, blog categories, block my-account, toolbar category ...<br/>Default: #fafafa <span class="color_pattern" style="background-color:#fafafa"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>30</sort_order>
+                        </bd_bg3_color>
+						<bd_bg4_color translabel="label, comment">
+                            <label>Body Background 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in tab slider home page<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>31</sort_order>
+                        </bd_bg4_color>
+						<bd_bg5_color translabel="label, comment">
+                            <label>Body Background 5 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in title block<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>32</sort_order>
+                        </bd_bg5_color>
+                        <bd_bg_image translabel="label, comment">
+                            <label>Body Background Pattern</label>
+							<comment><![CDATA[<strong>Specify background pattern image.</strong>]]></comment>
+							<frontend_type>hidden</frontend_type>
+							<frontend_model>rainbowsettings/adminhtml_system_config_form_field_stripes</frontend_model>
+							<source_model>rainbowsettings/config_stripes</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+                        </bd_bg_image>
+                        <bd_bg_file>
+							<label>Upload Body Background Image</label>
+							<comment><![CDATA[<strong>Upload your custom page background image</strong> instead of selecting above background pattern]]></comment>
+							<frontend_type>file</frontend_type>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">background</upload_dir> 
+							<base_url type="media" scope_info="1">background</base_url>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+						</bd_bg_file>
+                        <bd_bg_position translabel="label, comment">
+                            <label>Body Background Position</label>
+        					<comment><![CDATA[<strong>Property Values: left top, left center, left bottom,right top, right center, right bottom,center top,center center,center bottom,x% y%, xpos ypos, inherit</strong><br/>Default: 0 0]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>60</sort_order>
+                        </bd_bg_position>
+                        <bd_bg_repeat translabel="label, comment">
+                            <label>Body Background Repeat</label>
+        					<comment><![CDATA[<strong>Property Values: repeat, repeat-x, repeat-y, no-repeat, inherit</strong><br/>Default: repeat]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>70</sort_order>
+                        </bd_bg_repeat>                        
+                        <bd_text_color translabel="label, comment">
+                            <label>Body Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in product name<br/>Default: #191919 <span class="color_pattern" style="background-color:#191919"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>80</sort_order>
+                        </bd_text_color>
+                        <bd_text2_color translabel="label, comment">
+                            <label>Body Text 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in normal text.<br/>Default: #505050 <span class="color_pattern" style="background-color:#505050"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>90</sort_order>
+                        </bd_text2_color>
+                        <bd_text3_color translabel="label, comment">
+                            <label>Body Text 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in normal text.<br/>Default: #a0a0a0 <span class="color_pattern" style="background-color:#a0a0a0"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </bd_text3_color>
+                        <bd_text4_color translabel="label, comment">
+                            <label>Body Text 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in text hover/active ... <br/>Default: #fb687b <span class="color_pattern" style="background-color:#fb687b"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>110</sort_order>
+                        </bd_text4_color>
+						<bd_text5_color translabel="label, comment">
+                            <label>Body Text 5 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in label, title tab active ... <br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>120</sort_order>
+                        </bd_text5_color>
+						<bd_text6_color translabel="label, comment">
+                            <label>Body Text 6 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>The color used in text in stock...<br/>Default: #6ad98a <span class="color_pattern" style="background-color:#6ad98a"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>130</sort_order>
+                        </bd_text6_color>
+						<bd_text7_color translabel="label, comment">
+                            <label>Body Text 7 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>The color used in text title block<br/>Default: #191919 <span class="color_pattern" style="background-color:#191919"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>131</sort_order>
+                        </bd_text7_color>
+						<bd_text8_color translabel="label, comment">
+                            <label>Body Text 8 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>The color used in text title tab<br/>Default: #191919 <span class="color_pattern" style="background-color:#191919"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>132</sort_order>
+                        </bd_text8_color>
+                        <bd_line_color translabel="label, comment">
+                            <label>Body Line 1 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>The line used in border input, select, box, table...<br/>Default: #e6e6e6 <span class="color_pattern" style="background-color:#e6e6e6"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>140</sort_order>
+                        </bd_line_color>
+                        <bd_line2_color translabel="label, comment">
+                            <label>Body Line 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in border title checkout, account dashboard, title block.<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>150</sort_order>
+                        </bd_line2_color>
+						<bd_line3_color translabel="label, comment">
+                            <label>Body Line 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in border title tab.<br/>Default: #e6e6e6 <span class="color_pattern" style="background-color:#e6e6e6"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>151</sort_order>
+                        </bd_line3_color>
+						<bd_line4_color translabel="label, comment">
+                            <label>Body Line 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default line color used in border title block.<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>152</sort_order>
+                        </bd_line4_color>
+                        <bd_box_shadow translate="label comment">
+							<label>Box Shadow</label>
+							<comment><![CDATA[<strong>Default box shadow used in dropdown menu, dropdown cart...<br/>Default: 0 0 10px #888888]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>160</sort_order>
+						</bd_box_shadow>
+						<bd_rounded_corner>
+							<label>Rounded Corner</label>
+            				<comment><![CDATA[<strong>Default rounded corner used in button, input, dropdown menu...<br/>Default: 0px]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>170</sort_order>
+						</bd_rounded_corner>
+                    </fields>
+                </body>
+
+                <footer translate="label">
+                    <label>Footer Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>  
+					<sort_order>50</sort_order>
+                    <fields>
+                        <f_bg_color translabel="label, comment">
+                            <label>Footer Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in footer.<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>10</sort_order>
+                        </f_bg_color>
+                        <f_bg2_color translabel="label, comment">
+                            <label>Footer Background 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default background color used in footer popular.<br/>Default: #eeeeee <span class="color_pattern" style="background-color:#eeeeee"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>20</sort_order>
+                        </f_bg2_color>
+                        <f_bg_image translabel="label, comment">
+                            <label>Footer Background Pattern</label>
+							<comment><![CDATA[<strong>Specify background pattern image.</strong>]]></comment>
+							<frontend_type>hidden</frontend_type>
+							<frontend_model>rainbowsettings/adminhtml_system_config_form_field_stripes</frontend_model>
+							<source_model>rainbowsettings/config_stripes</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+                        </f_bg_image>
+                        <f_bg_file>
+							<label>Upload Footer Background Image</label>
+							<comment><![CDATA[<strong>Upload your custom page background image</strong> instead of selecting above background pattern]]></comment>
+							<frontend_type>file</frontend_type>
+							<backend_model>adminhtml/system_config_backend_file</backend_model>
+							<upload_dir config="system/filesystem/media" scope_info="1">background</upload_dir> 
+							<base_url type="media" scope_info="1">background</base_url>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+						</f_bg_file>
+                        <f_bg_position translabel="label, comment">
+                            <label>Footer Background Position</label>
+        					<comment><![CDATA[<strong>Property Values: left top, left center, left bottom,right top, right center, right bottom,center top,center center,center bottom,x% y%, xpos ypos, inherit</strong><br/>Default: 0 0]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>50</sort_order>
+                        </f_bg_position>
+                        <f_bg_repeat translabel="label, comment">
+                            <label>Footer Background Repeat</label>
+        					<comment><![CDATA[<strong>Property Values: repeat, repeat-x, repeat-y, no-repeat, inherit</strong><br/>Default: repeat]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>60</sort_order>
+                        </f_bg_repeat>
+                        <f_text_color translabel="label, comment">
+                            <label>Footer Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in footer <br/>Default: #555555 <span class="color_pattern" style="background-color:#555555"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>70</sort_order>
+                        </f_text_color>
+                        <f_text2_color translabel="label, comment">
+                            <label>Footer Text 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in footer title.<br/>Default: #191919 <span class="color_pattern" style="background-color:#191919"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>80</sort_order>
+                        </f_text2_color>
+                        <f_text3_color translabel="label, comment">
+                            <label>Footer Text 3 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used in footer address.<br/>Default: #a0a0a0 <span class="color_pattern" style="background-color:#a0a0a0"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>90</sort_order>
+                        </f_text3_color>
+						<!--<f_text4_color translabel="label, comment">
+                            <label>Footer Text 4 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default text color used when hover links in footer top.<br/>Default: #46b08d <span class="color_pattern" style="background-color:#46b08d"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </f_text4_color>-->
+                        <f_line_color translabel="label, comment">
+                            <label>Footer Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #d2d2d2 <span class="color_pattern" style="background-color:#d2d2d2"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>110</sort_order>
+                        </f_line_color>
+						<!--<f_line2_color translabel="label, comment">
+                            <label>Footer Line 2 Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #e4e4e4 <span class="color_pattern" style="background-color:#e4e4e4"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>120</sort_order>
+                        </f_line2_color>-->
+                    </fields>
+                </footer>
+
+                <button translate="label">
+                    <label>Button Customizable Design</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>  
+					<sort_order>60</sort_order>
+                    <fields>
+                        <btn1_label translabel="label, comment">
+                            <label>Button 1 (Button Default)</label>
+        					<frontend_type>label</frontend_type>
+        					<frontend_class>tm_label</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>10</sort_order>
+                        </btn1_label>
+                        <btn1_bg_color translabel="label, comment">
+                            <label>Button 1 Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #3f3f3f <span class="color_pattern" style="background-color:#3f3f3f"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>20</sort_order>
+                        </btn1_bg_color>
+                        <btn1_text_color translabel="label, comment">
+                            <label>Button 1 Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #fff <span class="color_pattern" style="background-color:#fff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>30</sort_order>
+                        </btn1_text_color>
+                        <btn1_line_color translabel="label, comment">
+                            <label>Button 1 Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #000000 <span class="color_pattern" style="background-color:#000000"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>40</sort_order>
+                        </btn1_line_color>
+                        <btn1_font translabel="label, comment">
+                            <label>Button Font</label>
+        					<comment><![CDATA[Default: normal 16px/1.35 Arial,Helvetica,sans-serif]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>50</sort_order>
+                        </btn1_font>
+                        <btn2_label translabel="label, comment">
+                            <label>Button 2 (button checkout dropdown cart...)</label>
+        					<frontend_type>label</frontend_type>
+        					<frontend_class>tm_label</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>60</sort_order>
+                        </btn2_label>
+                        <btn2_bg_color translabel="label, comment">
+                            <label>Button 2 Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #90ecaa <span class="color_pattern" style="background-color:#90ecaa"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>70</sort_order>
+                        </btn2_bg_color>
+                        <btn2_text_color translabel="label, comment">
+                            <label>Button 2 Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>80</sort_order>
+                        </btn2_text_color>
+                        <btn2_line_color translabel="label, comment">
+                            <label>Button 2 Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #50db78 <span class="color_pattern" style="background-color:#50db78"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>90</sort_order>
+                        </btn2_line_color>
+                        <btn2_font translabel="label, comment">
+                            <label>Button 2 Font</label>
+        					<comment><![CDATA[Default: normal 16px/1.35 Arial,Helvetica,sans-serif]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>100</sort_order>
+                        </btn2_font>
+						<btn3_label translabel="label, comment">
+                            <label>Button 3(button checkout ...)</label>
+        					<frontend_type>label</frontend_type>
+        					<frontend_class>tm_label</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>110</sort_order>
+                        </btn3_label>
+                        <btn3_bg_color translabel="label, comment">
+                            <label>Button 3 Background Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ff7b8f <span class="color_pattern" style="background-color:#ff7b8f"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>120</sort_order>
+                        </btn3_bg_color>
+                        <btn3_text_color translabel="label, comment">
+                            <label>Button 3 Text Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ffffff <span class="color_pattern" style="background-color:#ffffff"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>130</sort_order>
+                        </btn3_text_color>
+                        <btn3_line_color translabel="label, comment">
+                            <label>Button 3 Line Color</label>
+        					<comment><![CDATA[Syntax: #number or rgba(...)<br/>Default: #ff2b4c <span class="color_pattern" style="background-color:#ff2b4c"/>]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<frontend_class>colorjoe</frontend_class>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>140</sort_order>
+                        </btn3_line_color>
+                        <btn3_font translabel="label, comment">
+                            <label>Button 3 Font</label>
+        					<comment><![CDATA[Default: normal 16px/1.35 Arial,Helvetica,sans-serif]]></comment>
+        					<frontend_type>text</frontend_type>
+        					<show_in_default>1</show_in_default>
+        					<show_in_website>1</show_in_website>
+        					<show_in_store>1</show_in_store>
+        					<sort_order>150</sort_order>
+                        </btn3_font>
+                    </fields>
+                </button>
+
+				<products_grid>
+					<label>Products Grid</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>70</sort_order>
+					<fields>
+						<li_width>
+							<label>Item Width</label>
+							<comment><![CDATA[E.g. <em>194</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</li_width>
+						<li_height>
+							<label>Item Height</label>
+							<comment><![CDATA[E.g. <em>385</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</li_height>
+						<gutter>
+							<label>Gutter between 2 items</label>
+							<comment><![CDATA[E.g. <em>-1</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>25</sort_order>
+						</gutter>
+						<show_product_name>
+			                <label>Show Product's Name</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+			            </show_product_name>
+			            <show_sku>
+			                <label>Show Sku</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+			            </show_sku>
+			            <show_thumbnail>
+			                <label>Show Thumbnail</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+			            </show_thumbnail>
+						<thumb_width>
+							<label>Thumbnail Width</label>
+							<comment><![CDATA[E.g. <em>194</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</thumb_width>
+						<thumb_height>
+							<label>Thumbnail Height</label>
+							<comment><![CDATA[E.g. <em>194</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</thumb_height>
+						<alt_img>
+							<label>Alternative image</label>
+							<comment><![CDATA[Image should be displayed when hover to the thumbnail image.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>rainbowsettings/config_altimg</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</alt_img>
+						<show_desc>
+			                <label>Show Product's Description</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>70</sort_order>
+			            </show_desc>
+			            <show_price>
+			                <label>Show Product's Price</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+			            </show_price>
+			            <show_reviews>
+			                <label>Show Product's Reviews</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+			            </show_reviews>
+			            <show_saleables>
+			                <label>Show In/Out Stock</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>100</sort_order>
+			            </show_saleables>
+			            <show_addtocart>
+			                <label>Show Add to cart button</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>110</sort_order>
+			            </show_addtocart>
+			            <show_addto>
+			                <label>Show Add to wishlist-compare button</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>120</sort_order>
+			            </show_addto>
+						<show_label>
+			                <label>Show EM Label</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>130</sort_order>
+			            </show_label>
+					</fields>
+				</products_grid>
+
+				<products_list>
+					<label>Products List</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>80</sort_order>
+					<fields>
+						<width>
+							<label>Image Width</label>
+							<comment><![CDATA[E.g. <em>200</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</width>
+						<height>
+							<label>Image Height</label>
+							<comment><![CDATA[E.g. <em>200</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</height>
+						<gutter>
+							<label>Gutter between 2 items</label>
+							<comment><![CDATA[E.g. <em>0</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>25</sort_order>
+						</gutter>
+						<show_product_name>
+			                <label>Show Product's Name</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+			            </show_product_name>
+			            <show_sku>
+			                <label>Show Sku</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+			            </show_sku>
+			            <show_thumbnail>
+			                <label>Show Thumbnail</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+			            </show_thumbnail>
+                        <alt_img>
+							<label>Alternative image</label>
+							<comment><![CDATA[Image should be displayed when hover to the thumbnail image.]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>rainbowsettings/config_altimg</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</alt_img>
+						<show_desc>
+			                <label>Show Product's Description</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>70</sort_order>
+			            </show_desc>
+			            <show_price>
+			                <label>Show Product's Price</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+			            </show_price>
+			            <show_reviews>
+			                <label>Show Product's Reviews</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+			            </show_reviews>
+			            <show_saleables>
+			                <label>Show In/Out Stock</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>100</sort_order>
+			            </show_saleables>
+			            <show_addtocart>
+			                <label>Show Add to cart button</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>110</sort_order>
+			            </show_addtocart>
+			            <show_addto>
+			                <label>Show Add to wishlist-compare button</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>120</sort_order>
+			            </show_addto>
+						<show_label>
+			                <label>Show EM Label</label>
+			                <frontend_type>select</frontend_type><source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>130</sort_order>
+			            </show_label>
+					</fields>
+				</products_list>
+
+				<image_product translate="label">
+					<label>Product Detail Page</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>90</sort_order>
+					<fields>
+						<viewmode>
+							<label>View mode</label>
+							<comment><![CDATA[Set view mode in detail page: cloudzoom, lightbox, default]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>rainbowsettings/config_product_view</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</viewmode>
+						<base_image_width translate="label">
+							<label>Base Image Width</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</base_image_width>
+						<base_image_height translate="label comment">
+							<label>Base Image Height</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</base_image_height>
+						<cloud_zoom_width>
+							<label>Cloud-Zoom Width</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+						</cloud_zoom_width>
+						<cloud_zoom_height>
+							<label>Cloud-Zoom Height</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+						</cloud_zoom_height>
+						<thumb_base_width translate="label comment">
+							<label>Thumbnail Width</label>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</thumb_base_width>
+						<thumb_base_height translate="label">
+							<label>Thumbnail Height</label>
+							<frontend_type>text</frontend_type>
+							 <show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>70</sort_order>
+						</thumb_base_height>
+						<usetabs>
+							<label>Enable Tabs</label>
+							<comment><![CDATA[Use tabs to display product collaterals]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+						</usetabs>
+                        <disable_social>
+							<label>Enable Block Social On Details page</label>
+							<comment><![CDATA[<strong>Display the block social on frontend.</strong>]]></comment>
+							<frontend_type>select</frontend_type>
+							<source_model>adminhtml/system_config_source_yesno</source_model>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+						</disable_social>
+					</fields>
+				</image_product>
+
+				<related translate="label">
+					<label>Related Products</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>100</sort_order>
+					<fields>
+						<width>
+							<label>Item Width</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</width>
+						<height>
+							<label>Item Height</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</height>
+					</fields>
+				</related>
+
+				<upsell translate="label">
+					<label>Upsell</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>110</sort_order>
+					<fields>
+						<width>
+							<label>Image Width</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</width>
+						<height>
+							<label>Image Height</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</height>
+					</fields>
+				</upsell>
+
+				<crosssell translate="label">
+					<label>Crosssell</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>120</sort_order>
+					<fields>
+						<width>
+							<label>Image Width</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</width>
+						<height>
+							<label>Image Height</label>
+							<comment><![CDATA[E.g. <em>150</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</height>
+					</fields>
+				</crosssell>
+
+				<sidebar translate="label">
+					<label>Image on Cart Sidebar</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>130</sort_order>
+					<fields>
+						<width translate="label comment">
+							<label>Thumbnail Width</label>
+							<comment><![CDATA[E.g. <em>90</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							 <show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</width>
+						<height translate="label comment">
+							<label>Thumbnail Height</label>
+							<comment><![CDATA[E.g. <em>90</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</height>
+					</fields>
+				</sidebar>
+
+				<cart translate="label">
+					<label>Image on Shopping Cart</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>140</sort_order>
+					<fields>
+						<width>
+							<label>Width</label>
+							<comment><![CDATA[E.g. <em>90</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</width>
+						<height>
+							<label>Height</label>
+							<comment><![CDATA[E.g. <em>90</em>]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</height>
+					</fields>
+				</cart>
+
+				<ajaxcart translate="label">
+					<label>Ajax cart</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>150</sort_order>
+					<fields>
+						<auto_close>
+							<label>Auto close</label>
+							<comment><![CDATA[Specify the second for ajax cart to auto-close.]]></comment>
+							<frontend_type>text</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</auto_close>
+					</fields>
+				</ajaxcart>
+
+				<position>
+					<label>Config sidebar for general blocks</label>
+					<frontend_type>text</frontend_type>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+					<sort_order>170</sort_order>
+					<fields>
+						<catalog_shopby translate="label">
+							<label>Catalog layer navigation( Anchor )</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>10</sort_order>
+						</catalog_shopby>
+						<catalog_leftnav translate="label">
+							<label>Catalog navigation( Non-anchor )</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>20</sort_order>
+						</catalog_leftnav>
+						<catalog_search_layer translate="label">
+							<label>Catalog search layer</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed at catalog search result page]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>30</sort_order>
+						</catalog_search_layer>
+						<compare translate="label">
+							<label>Compare product</label>
+							<source_model>rainbowsettings/config_sidebar</source_model>
+							<frontend_type>select</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>40</sort_order>
+						</compare>
+						<recent_view translate="label">
+							<label>Recent View Sidebar</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed at product detail page]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>50</sort_order>
+						</recent_view>
+						<latest_review translate="label">
+							<label>Latest Review sidebar</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed at product detail page]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>60</sort_order>
+						</latest_review>
+						<callout_cate translate="label">
+							<label>Callout Category Block</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed at product detail page]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>70</sort_order>
+						</callout_cate>
+						<poll translate="label">
+							<label>Community poll</label>
+							<source_model>rainbowsettings/config_sidebar</source_model>
+							<frontend_type>select</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>80</sort_order>
+						</poll>
+						<popular_tags translate="label">
+							<label>Popular tags</label>
+							<source_model>rainbowsettings/config_sidebar</source_model>
+							<frontend_type>select</frontend_type>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>90</sort_order>
+						</popular_tags>
+						<wishlist_sidebar translate="label">
+							<label>Wishlist sidebar</label>
+							<source_model>rainbowsettings/config_sidebar</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed if user logged in.]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>100</sort_order>
+						</wishlist_sidebar>
+						<reorder_sidebar translate="label">
+							<label>Reorder sidebar</label>
+							<source_model>rainbowsettings/config_sidebar_shopby</source_model>
+							<frontend_type>select</frontend_type>
+							<comment><![CDATA[This block is only showed if user logged in.]]></comment>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+							<sort_order>110</sort_order>
+						</reorder_sidebar>
+					</fields>
+				</position>
+			</groups>
+		</galarainbow>
+	</sections>
+</config>

@@ -1,0 +1,215 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magentocommerce.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magentocommerce.com for more information.
+ *
+ * @category    design
+ * @package     default_default
+ * @copyright   Copyright (c) 2012 Magento Inc. (http://www.magentocommerce.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>em/colorjoe.js"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>em/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="<?php echo Mage::getBaseUrl('js') ?>em/jquery-noconflict.js"></script>
+
+<div class="banner">
+	<a href="http://www.galathemes.com/" target="_blank"><img src="<?php echo Mage::getBaseUrl('media') ?>demo/logo_gala.png" alt="Gala Themes" title="Gala Themes"/></a>
+</div>
+<div class="entry-edit">
+    <?php echo $this->getFormHtml();?>
+</div>
+<?php echo $this->getChildHtml('form_after');?>
+
+<script type="text/javascript">
+jQuery(function($) {	
+	var fontLoaded = {};
+	$('#galarainbow_typography_google_fonts').after('<p id="galarainbow_typography_google_fonts_preview" style="font-size:20px;padding:10px 0"></p>')
+		.bind('change', function() {
+			var font = $(this).val();
+			if (font.length > 0) {
+				font = font[font.length-1];
+				if (typeof fontLoaded[font] == 'undefined') {
+					$('head').append('<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family='+encodeURIComponent(font)+':400,100,100italic,300,300italic,400italic,500,500italic,700,700italic,900,900italic&subset=latin,cyrillic-ext,cyrillic,greek-ext,greek,vietnamese,latin-ext"></link>');
+					$('#galarainbow_typography_google_fonts_preview').html(font)
+						.css('font-family', font);
+				}
+			}
+		});
+		
+		
+	// stripes pattern
+	$('a.galarainbow_header_h_bg_image').click(function() {
+		$('a.galarainbow_header_h_bg_image').removeClass('selected');
+		$(this).addClass('selected');
+		$('#galarainbow_header_h_bg_image').val($(this).data('input-value'));
+		return false;
+	});
+	
+	// stripes pattern
+	$('a.galarainbow_body_bd_bg_image').click(function() {
+		$('a.galarainbow_body_bd_bg_image').removeClass('selected');
+		$(this).addClass('selected');
+		$('#galarainbow_body_bd_bg_image').val($(this).data('input-value'));
+		return false;
+	});
+	
+	// stripes pattern
+	$('a.galarainbow_footer_f_bg_image').click(function() {
+		$('a.galarainbow_footer_f_bg_image').removeClass('selected');
+		$(this).addClass('selected');
+		$('#galarainbow_footer_f_bg_image').val($(this).data('input-value'));
+		return false;
+	});
+    
+    // stripes pattern
+	$('a.galarainbow_general_page_bg_image').click(function() {
+		$('a.galarainbow_general_page_bg_image').removeClass('selected');
+		$(this).addClass('selected');
+		$('#galarainbow_general_page_bg_image').val($(this).data('input-value'));
+		return false;
+	});
+    $(document).ready(function(){
+        var b = $('#galarainbow_general_box_wide').val();
+        if(b=='wide'){
+            $('#row_galarainbow_general_wideslide_full').show();
+            $('#row_galarainbow_general_p_bg_color').hide();
+            $('#row_galarainbow_general_page_bg_image').hide();
+            $('#row_galarainbow_general_page_bg_file').hide();
+            $('#row_galarainbow_general_page_bg_position').hide();
+            $('#row_galarainbow_general_page_bg_repeat').hide();
+        }else{
+            $('#row_galarainbow_general_wideslide_full').hide();
+            $('#row_galarainbow_general_p_bg_color').show();
+            $('#row_galarainbow_general_page_bg_image').show();
+            $('#row_galarainbow_general_page_bg_file').show();
+            $('#row_galarainbow_general_page_bg_position').show();
+            $('#row_galarainbow_general_page_bg_repeat').show();
+        }
+
+        var zoom = $('#galarainbow_image_product_viewmode').val();
+        if(zoom=='cloudzoom'){
+            $('#row_galarainbow_image_product_cloud_zoom_width').show();
+            $('#row_galarainbow_image_product_cloud_zoom_height').show();
+			$('#row_galarainbow_image_product_base_image_width').hide();
+            $('#row_galarainbow_image_product_base_image_height').hide();
+        }else{
+			$('#row_galarainbow_image_product_base_image_width').show();
+            $('#row_galarainbow_image_product_base_image_height').show();
+            $('#row_galarainbow_image_product_cloud_zoom_width').hide();
+            $('#row_galarainbow_image_product_cloud_zoom_height').hide();
+        }
+		
+		var ajax = $('#galarainbow_products_grid_enable_ajaxscroll').val();
+        if(ajax==1){
+            $('#row_galarainbow_products_grid_use_click_cat').show();
+        }else{
+            $('#row_galarainbow_products_grid_use_click_cat').hide();
+        }
+    });
+    
+    // box/wide
+    $('#galarainbow_general_box_wide').change(function(){
+       var a = $('#galarainbow_general_box_wide').val();
+       if(a == 'box'){
+            $('#row_galarainbow_general_wideslide_full').hide();
+            $('#row_galarainbow_general_p_bg_color').show();
+            $('#row_galarainbow_general_page_bg_image').show();
+            $('#row_galarainbow_general_page_bg_file').show();
+            $('#row_galarainbow_general_page_bg_position').show();
+            $('#row_galarainbow_general_page_bg_repeat').show();
+       }else{
+            $('#row_galarainbow_general_wideslide_full').show();
+            $('#row_galarainbow_general_p_bg_color').hide();
+            $('#row_galarainbow_general_page_bg_image').hide();
+            $('#row_galarainbow_general_page_bg_file').hide();
+            $('#row_galarainbow_general_page_bg_position').hide();
+            $('#row_galarainbow_general_page_bg_repeat').hide();
+       } 
+    });
+
+    // zoom
+    $('#galarainbow_image_product_viewmode').change(function(){
+       var zoom = $('#galarainbow_image_product_viewmode').val();
+       if(zoom=='cloudzoom'){
+            $('#row_galarainbow_image_product_cloud_zoom_width').show();
+            $('#row_galarainbow_image_product_cloud_zoom_height').show();
+            $('#row_galarainbow_image_product_base_image_width').hide();
+            $('#row_galarainbow_image_product_base_image_height').hide();
+        }else{
+			$('#row_galarainbow_image_product_base_image_width').show();
+            $('#row_galarainbow_image_product_base_image_height').show();
+            $('#row_galarainbow_image_product_cloud_zoom_width').hide();
+            $('#row_galarainbow_image_product_cloud_zoom_height').hide();
+        }
+    });
+
+	// ajax
+    $('#galarainbow_products_grid_enable_ajaxscroll').change(function(){
+       var ajax = $('#galarainbow_products_grid_enable_ajaxscroll').val();
+       if(ajax==1){
+            $('#row_galarainbow_products_grid_use_click_cat').show();
+        }else{
+            $('#row_galarainbow_products_grid_use_click_cat').hide();
+        }
+    });
+	
+	$('head').append('<link rel="stylesheet" type="text/css" href="<?php echo Mage::getBaseUrl('js') ?>em/colorjoe.css" />');
+
+	// color picker
+	(function() {
+		var focus;
+
+		var el = document.createElement('div');
+		el.id = 'hslPicker';
+		$('body').append(el);
+
+		var cj = colorjoe.hsl(el, '#ffffff', [
+			// 'close',
+			'alpha',
+			'currentColor',
+			['fields', {space: 'HSLA', limit: 100, fix:2}],
+			['fields', {space: 'CMYKA', limit: 100, fix:2}],
+			'hex'
+		]).on('change', function(c) {
+			if (focus) {
+				$(focus).val(c.hex())
+					.css('background-color', c.hex());
+			}
+			
+		}).update().hide();
+	
+		var tm;
+		$('.colorjoe').focus(function() {
+			clearTimeout(tm);
+			focus = this;
+			$(el).css({position:'absolute', left:$(this).offset().left+'px', top:$(this).offset().top+$(this).outerHeight()+'px'});
+			if ($(this).val()) cj.set($(this).val());
+			cj.show();
+		}).blur(function() {
+			tm = setTimeout(function() {
+				cj.hide();
+			}, 200);
+		}).change(function() {
+			$(this).css('background-color', $(this).val());
+		}).each(function() {
+			$(this).css('background-color', $(this).val());
+		});
+	})();
+});
+</script>

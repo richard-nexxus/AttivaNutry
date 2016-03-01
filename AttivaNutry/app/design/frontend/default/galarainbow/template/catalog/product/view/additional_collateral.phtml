@@ -1,0 +1,5 @@
+<?php $i=1;foreach ($this->getSortedChildren() as $i => $name): ?>
+	<div class="box-collateral <?php echo "box-$name" ?>">
+		<?php echo $this->getChildHtml($name) ?>
+	</div>
+<?php endforeach ?>

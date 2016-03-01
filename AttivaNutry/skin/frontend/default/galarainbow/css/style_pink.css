@@ -1,0 +1,8 @@
+.icon{ background:url(../images/icons_s3.png) 0 0 no-repeat}
+.slider_special .csslider a.next{ background:url(../images/icons_s3.png) -404px -94px no-repeat}
+.slider_special .csslider a.prev{ background:url(../images/icons_s3.png) -404px -75px no-repeat;}
+a.prev,
+.csslider a.prev{ background:url(../images/icons_s3.png) -426px -300px no-repeat}
+
+a.next,
+.csslider a.next{ background:url(../images/icons_s3.png) -465px -300px no-repeat}

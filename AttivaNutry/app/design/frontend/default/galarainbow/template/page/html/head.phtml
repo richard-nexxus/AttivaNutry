@@ -1,0 +1,132 @@
+<?php
+/**
+ * Magento
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available through the world-wide-web at this URL:
+ * http://opensource.org/licenses/afl-3.0.php
+ * If you did not receive a copy of the license and are unable to
+ * obtain it through the world-wide-web, please send an email
+ * to license@magento.com so we can send you a copy immediately.
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade Magento to newer
+ * versions in the future. If you wish to customize Magento for your
+ * needs please refer to http://www.magento.com for more information.
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2014 X.commerce, Inc. (http://www.magento.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+<link rel="icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<link rel="shortcut icon" href="<?php echo $this->getFaviconFile(); ?>" type="image/x-icon" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<script type="text/javascript">
+//<![CDATA[
+	var urlSkinsite='<?php echo $this->getSKinUrl(); ?>';
+//]]>
+</script>
+
+<!--[if lt IE 7]>
+<script type="text/javascript">
+//<![CDATA[
+    var BLANK_URL = '<?php echo $this->helper('core/js')->getJsUrl('blank.html') ?>';
+    var BLANK_IMG = '<?php echo $this->helper('core/js')->getJsUrl('spacer.gif') ?>';
+//]]>
+</script>
+<![endif]-->
+<script type="text/javascript">
+var ADAPT_CONFIG = {
+  path: "<?php echo $this->getSkinUrl('css') ?>/",
+  dynamic: true,
+  range: [
+    '0px    to 760px  = mobile.css',
+    '760px  to 980px  = 720.css',
+    '980px  to 1200px = 960.css',
+    '1200px           = 1200.css'
+  ]
+};
+</script>
+<?php	$setting = Mage::helper('rainbowsettings'); ?>
+<script type="text/javascript">
+//<![CDATA[
+    var PRODUCTSGRID_ITEM_WIDTH = <?php echo $setting->getProductsGrid_LiWidth(200) ?>;
+    var PRODUCTSGRID_ITEM_SPACING = 0;
+//]]>
+</script>
+<script type="text/javascript">
+//<![CDATA[   
+    var isMobile = /iPhone|iPod|iPad|Phone|Mobile|Android|hpwos/i.test(navigator.userAgent);
+    var isPhone = /iPhone|iPod|Phone|Android/i.test(navigator.userAgent);
+    var product_zoom = null;
+    var urlsite = '<?php echo Mage::getBaseUrl(Mage_Core_Model_Store::URL_TYPE_WEB); ?>';
+    var AJAXCART_AUTOCLOSE = <?php echo $setting->getAjaxcart_AutoClose(0) ?>;
+    var FREEZED_TOP_MENU = <?php echo $setting->getGeneral_FreezedTopMenu(0) ?>;
+	var boxwide_v = '<?php echo $setting->getGeneral_BoxWide() ?>';
+	var fullslideshow = '<?php echo $setting->getGeneral_WideslideFull() ?>';
+//]]>
+</script>
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>
+<script type="text/javascript">
+jQuery(function($) {
+	if(isMobile == true){
+		$('#top_cart').attr('href','javascript:void(0)');
+		$("#top_cart").click(
+			function( event ){
+				$('#block-cart').slideToggle();
+				$('#top-links').slideUp();
+			}
+		);
+	}else{
+		$('#top_cart')
+		.bind('mouseover', showmenu)
+		.bind('click', showmenu)
+		.bind('mouseout', hidemenu);
+
+		$('#block-cart')
+		.bind('mouseover', showmenu)
+		.bind('click', hidemenu)
+		.bind('mouseout', hidemenu);
+	}
+
+	var timeout = null;
+	function hidemenu() {
+		if (timeout)
+			clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			timeout = null;
+			$('#block-cart').slideUp();
+			$('#top_cart').removeClass('over');
+		}, 200);
+	}
+
+	function showmenu() {
+		if (timeout)
+			clearTimeout(timeout);
+		timeout = setTimeout(function() {
+			timeout = null;
+			$('#block-cart').slideDown();
+			$('#top_cart').addClass('over');
+		}, 200);
+	}
+	
+        
+       
+});
+});
+</script>

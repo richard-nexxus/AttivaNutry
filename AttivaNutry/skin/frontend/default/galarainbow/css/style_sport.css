@@ -1,0 +1,38 @@
+.icon{ background:url(../images/icons_s7.png) 0 0 no-repeat}
+.icon-menu{ background:url(../images/icons_menu_s7.png) 23px 0 no-repeat}
+.form-search button.button span span { background:url(../images/icons_s7.png) 10px -52px no-repeat;}
+.form-search button.button:hover span span{ background:url(../images/icons_s7.png) 10px -93px no-repeat}
+a.link-wishlist{ background:url(../images/icons_s7.png) -122px -208px no-repeat;}
+a.link-compare{ background:url(../images/icons_s7.png) -172px -208px no-repeat;  }
+.block-wishlist .link-cart, button.button.btn-cart{ background: url(../images/icons_s7.png) -72px -208px no-repeat;}
+.add-to-links li a:hover{box-shadow:0 0 5px #737272 ;
+-moz-box-shadow:0 0 5px #737272;
+-webkit-box-shadow: 0 0 5px #737272}
+
+.slider_special .csslider a.prev{ background-image:url(../images/icons_s7.png); border:none; background-color:#313131}
+.slider_special .csslider a.prev:hover{background-color:#c90100}
+
+.slider_special .csslider a.next{ background-image:url(../images/icons_s7.png);border:none; background-color:#313131}
+.slider_special .csslider a.next:hover{ background-color:#c90100}
+
+.ui-slider-tabs{ border-top:none}
+.ui-slider-tabs-list li{ }
+.home_category .title,
+.slider_container .slider_special .widget-title h2{ padding-right:20px; padding-left:20px}
+.footer_followus ul li span.title{ color:#fff; background:#c90100;}
+.footer_followus ul li:hover span.title:before{border-bottom-color: #c90100;}
+.nav-container #nav li:hover a.level-top, .em-catalog-navigation.vertical li:hover > a, .em-catalog-navigation.horizontal li:hover > a, .em_nav li.menu-item-depth-0:hover > a{ text-shadow: none;}
+.block-wishlist .link-cart:hover, button.button.btn-cart:hover {
+box-shadow: 0 0 5px #c90100;
+-moz-box-shadow: 0 0 5px #c90100;
+-webkit-box-shadow: 0 0 5px #c90100;
+}
+
+
+.em_block-tag-cloud .block-content .actions a, .block .actions a, .my-account .view-all, .em_nav .menu-item-depth-1 a.cls_view, .cls_view{ font-size:100%; font-weight:600}
+.block-subscribe .title, .footer_links .title{ font-size:120%; text-transform:uppercase}
+.home_category .content h5{ text-transform:capitalize; font-size:140%}
+.cms-index-index .block.em_block-recent-post .block-content li.item a.post-title{ font-size:140%; text-transform:capitalize}
+.form-search,
+.form-search .input_search{ box-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none}
+.form-search input.input-text{ color:#fff}

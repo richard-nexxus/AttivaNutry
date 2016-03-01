@@ -1,0 +1,235 @@
+/*
+
+INSTRUCTION FOR STYLING:
+
+# Change background, color of the horizontal menu bar:
+.em_nav .hnav { }
+
+# Change font, color of hyperlinks:
+.em_nav a { }
+.em_nav a:hover { }
+
+# Menu item's links when hover or active:
+.em_nav li:hover > a, .em_nav li.active > a { }
+
+
+# Top level's menu:
+# -----------------
+
+# Change padding, font, color of top menu item:
+.hnav .menu-item-depth-0 a { }
+
+# Change position of the drop-down menu of top level menu:
+.hnav .menu-item-depth-0 > .menu-container,
+.em-catalog-navigation.horizontal > li > ul,
+.em-catalog-navigation.horizontal > li:hover > ul { top:50px }
+
+# Level 2+ menu:
+# -----------------
+
+# Change background color, padding of container of level 2+ menu container:
+.em_nav .menu-item-link > ul,
+.em_nav .em-catalog-navigation ul { }
+
+# Change font, color of hyperlink of level 2+ menu items:
+.em_nav .menu-item-depth-1 a,
+.em_nav .em-catalog-navigation li li a { }
+
+# Change font, color of hover/active hyperlink of level 2+ menu items:
+.em_nav .menu-item-depth-1 li:hover > a, 
+.em_nav .menu-item-depth-1 li.active > a,
+.em_nav .em-catalog-navigation li li:hover > a,
+.em_nav .em-catalog-navigation li li.active > a { }
+
+
+# ----------------
+
+# Add a gutter between 2 children of hbox:
+.em_nav .menu-item-hbox > .menu-container > li { margin-left:10px }
+.em_nav .menu-item-hbox > .menu-container > li:first-child { margin-left:0 }
+
+# Fix hbox on mobile view
+.adapt-0 .menu-item-hbox > .menu-container { white-space:normal }
+.adapt-0 .menu-item-hbox > .menu-container > li { display:block; margin-left:0 }
+
+
+
+BELOW BASE CSS SHOULD NOT BE CHANGED:
+===============================================================================
+*/
+
+
+ul ul, ul ol, ol ol, ol ul { font-size:100% }
+
+.em_nav { }
+.em_nav ul { margin:0; }
+.em_nav li { /*margin:0;*/}
+.em_nav em,
+.em_nav code{word-wrap:break-word;}
+
+.menu-item-depth-0 a { display:block;}
+.hnav .menu-item-depth-0 > a { display:block; /*height:20px; */line-height:30px; padding:5px 10px }
+.em-catalog-navigation > li > a{ display:block; /*height:20px; */line-height:30px; padding:5px 10px }
+.menu-container .em-catalog-navigation > li > a{ display:block; /*height:20px; */line-height:20px; padding:5px 0px }
+.em-catalog-navigation ul.level0 li a{display:block;line-height:20px; padding:5px 10px }
+
+
+.adapt-0 .menu-item-depth-0 > ul.menu-container{ padding:15px 20px}
+.adapt-0 .menu-item-depth-0.dd-menu-link > ul.menu-container{ padding:15px 0px}
+/* horizontal menu */
+/*.menu-item-depth-1 > .menu-container > li{ padding:0 20px; margin:0}*/
+.menu-container .grid_24 .menu-item-depth-2 > .menu-container > li{ padding:0 10px;}
+.adapt-0 .menu-container .grid_24 .menu-item-depth-2 > .menu-container > li{ padding:0}
+.menu-container .grid_24{ margin:0}
+.hnav .menu-item-depth-0 { float:left; position:relative }
+.hnav .menu-item-depth-0 > .menu-container { position:absolute; top:30px; left:-9999px; z-index:9999 }
+
+/* vertical menu */
+
+.vnav { min-width:100px }
+.vnav .menu-item-depth-0 { position:relative }
+.vnav .menu-item-depth-0 a { display:block; padding:5px 0px }
+
+.vnav .menu-item-depth-0 > .menu-container { position:absolute; top:0; left:-9999px; z-index:9999 }
+
+/* general */
+.menu-item-parent > a { margin-right:20px }
+.em_nav a.arrow { position:absolute; margin-right:0 !important; width:20px; /*text-indent:-99999px;*/ overflow:hidden; top:0; right:0; padding:11px 0 !important }
+.em_nav a.arrow span { display:block; /* add background arrow here */ }
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px){
+	/* workaround for touch devices */
+	/*.menu-item-parent > .menu-container { display:none }
+	.menu-item-parent:hover > .menu-container { display:block }
+	.em-catalog-navigation li.parent > ul { display:none }
+	.em-catalog-navigation li.parent:hover > ul { display:block }*/
+	.menu-item-depth-0 > .menu-container { display:none }
+	.menu-item-depth-0:hover > .menu-container { display:block }
+	.em-catalog-navigation li > ul { display:none }
+	.em-catalog-navigation li:hover > ul { display:block }
+	.menu-item-link.menu-item-depth-1.menu-item-parent > .menu-container {display:none}
+	.menu-item-link.menu-item-depth-1.menu-item-parent:hover > .menu-container { display:block }
+}
+
+.menu-item-link > .menu-container,
+.em_nav .menu-item-link > ul,
+.em_nav .em-catalog-navigation ul ,
+.nav-container .em-catalog-navigation ul{
+	background-color:#fff;
+	padding:10px 0px;
+	box-shadow:0 2px 5px #ccc;
+	-moz-box-shadow:0 2px 5px #ccc ;
+	-webkit-box-shadow:0 2px 5px #ccc ;
+	border-radius:4px;
+	-webkit-border-radius:4px;
+	-moz-border-radius:4px;
+	border:1px solid #cdcdcd;
+}
+.adapt-0 .em_nav .em-catalog-navigation ul, 
+.adapt-0 .menu-item-link .menu-item-depth-1 > .menu-container{ border:none}
+/*.menu-item-link .menu-item-depth-1 > ul.menu-container{ padding:10px}*/
+/* ---------- level 2+ ---------- */
+
+/* horizontal menu */
+
+.hnav .menu-item-depth-0:hover > .menu-container,
+.hnav .menu-item-depth-0.hover > .menu-container { left:0 }
+
+/* vertical menu */
+
+.vnav .menu-item-depth-0:hover > .menu-container,
+.vnav .menu-item-depth-0.hover > .menu-container { left:100% }
+.vnav.nav-right .menu-item-depth-0:hover > .menu-container,
+.vnav.nav-right .menu-item-depth-0.hover > .menu-container { left:auto; right:100% }
+
+
+.menu-item-hbox > .menu-container { white-space:nowrap }
+.menu-item-hbox > .menu-container > li { display:inline-block; white-space:normal; vertical-align:top; float:none }
+.adapt-0 .menu-item-hbox > .menu-container > li { display: block; margin-left: 0;}
+.menu-item-link > .menu-container { min-width:150px; background:#fff; box-shadow:0 2px 7px #ccc }
+
+.menu-item-depth-0 .menu-item-link { position:relative }
+.menu-item-depth-0 .menu-item-link > .menu-container { position:absolute; top:0; left:-9999px; z-index:9999 }
+.menu-item-depth-0 .menu-item-link:hover > .menu-container,
+.menu-item-depth-0 .menu-item-link.hover > .menu-container { left:100%; top:-11px }
+.menu-container .menu-item-link a{ padding:5px 0px}
+.dd-menu-link .menu-container .menu-item-link a{ padding:5px 10px}
+.menu-item-link.dd-menu-link ul.menu-container{ padding:10px 0px}
+.adapt-0 .dd-menu-link.menu-item-depth-0 .menu-container li{ padding:0 10px}
+.adapt-0 .dd-menu-link.menu-item-depth-0 > .menu-container > li{ padding:0 20px}
+
+.nav-right .menu-item-depth-0 .menu-item-link:hover > .menu-container,
+.nav-right .menu-item-depth-0 .menu-item-link.hover > .menu-container { left:auto; right:100% }
+
+/* Catalog Navigation */
+.em-catalog-navigation li.parent > a { margin-right:20px }
+.em-catalog-navigation li.parent > a.arrow { margin-right:0; padding:5px 0 }
+.em-catalog-navigation ul { min-width:150px; background:#fff; box-shadow:0 2px 7px #ccc }
+.em-catalog-navigation li { position:relative }
+.em-catalog-navigation li > ul { position:absolute; top:0; left:-9999px; z-index:9999 }
+.em-catalog-navigation li:hover > ul,
+.em-catalog-navigation li.hover > ul { left:100%; top:-11px }
+.nav-right .em-catalog-navigation li:hover > ul,
+.nav-right .em-catalog-navigation li.hover > ul { left:auto; right:100% }
+
+.adapt-0 .em-catalog-navigation ul.level0 li{ padding:0 10px}
+.adapt-0 .em-catalog-navigation ul.level0 > li{ padding:0 20px}
+.adapt-0 .menu-container .em-catalog-navigation ul.level0 > li{ padding:0px}
+
+/* Catalog Navigation with vertical style of top level */
+.em-catalog-navigation.horizontal > li { float:left }
+.em-catalog-navigation.horizontal > li > ul { top:30px }
+.em-catalog-navigation.horizontal > li:hover > ul { left:0; top:30px }
+
+/* Mobile view */
+
+.adapt-0 .menu-item-link, 
+.adapt-0 .menu-item-text,
+.adapt-0 .menu-item-hbox,
+.adapt-0 .menu-item-vbox,
+.adapt-0 .em-catalog-navigation li { display:block; float:none;}
+
+.adapt-0 .menu-container,
+.adapt-0 .em-catalog-navigation ul { /*width:100% !important;*/ top:0 !important; }
+
+.adapt-0 .hnav .menu-item-depth-0 > .menu-container,
+.adapt-0 .menu-item-link > .menu-container,
+.adapt-0 .em-catalog-navigation li > ul,
+.adapt-0 .menu-item-depth-0 .menu-item-link > .menu-container	{display:none;position:static;}
+.adapt-0 .menu-item-link.mhover > .menu-container,
+.adapt-0 .em-catalog-navigation li.mhover > ul ,
+.adapt-0 .menu-item-depth-0 .menu-item-link.mhover > .menu-container{display:block;position:static; }
+
+
+/* Clear Divs */
+.em_nav .hnav:after,
+.em_nav .vnav:after,
+#nav > .menu-container:after,
+.menu-item-hbox:after { content:'.';display:block;clear:both;visibility:hidden;height:0;overflow:hidden }
+
+
+/*Icon Menu*/
+.emmegamenu_icon{
+	display:inline-block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

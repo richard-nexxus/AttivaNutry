@@ -1,0 +1,23 @@
+#bg_fade {background-color:#000;left:0px;margin:0px;padding:0px;position:fixed;top:0px;visibility:hidden;width:100%;z-index:998;height:1000px}
+#containerDiv {min-width: 350px;max-width:500px;z-index: 999;display:none;position:fixed;}
+#containerDiv .ajaxcart {position: relative;padding: 20px;text-align: center;z-index: 99999; max-height:660px;background-color:#ffffff; font-weight:normal}
+#containerDiv .ajaxcart .row2 {clear:left; padding-bottom:0px; overflow:hidden}
+#containerDiv .ajaxcart #ajax_image img {float:left;margin-right:7px;}
+#containerDiv .ajaxcart #ajax_image  { margin-bottom: 10px;overflow: hidden;text-align: left;}
+#containerDiv .ajaxcart #ajax_image span {text-align:left;}
+
+
+#containerDiv .ajaxcart .row2 a span { border: 0 none;padding: 0;}
+.product-essential {position:relative;}
+.ajaxcart .product-options{ max-height:250px;  overflow:auto;}
+.ajaxcart .product_title{ text-transform:uppercase; text-align:center}
+
+#containerDiv .ajaxcart .row2 a span{ float:left; display:inline-block}
+
+#containerDiv .ajaxcart .qty-ctl button.increase{ border-left:none; border-right:none;}
+#containerDiv .ajaxcart  .add-to-cart label{ padding-top:10px;}
+#containerDiv .ajaxcart .qty-ctl{ width:auto;}
+#containerDiv .ajaxcart .add-to-cart .qty{margin-top:0;}
+#containerDiv .ajaxcart .row2 a{ padding:8px 15px}
+.product-options-bottom .add-to-cart{ clear: both; display: block; overflow: hidden;}
+.ajaxcart .qty-ctl button{ height:35px!important;}

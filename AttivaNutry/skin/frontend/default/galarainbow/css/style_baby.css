@@ -1,0 +1,39 @@
+.icon{ background:url(../images/icons_s4.png) 0 0 no-repeat}
+.form-search button.button span span { background:url(../images/icons_s4.png) 10px -52px no-repeat;}
+.form-search button.button:hover span span{ background:url(../images/icons_s4.png) 10px -93px no-repeat}
+.slider_special .csslider a.next{ background:url(../images/icons_s4.png) -404px -94px no-repeat}
+.slider_special .csslider a.prev{ background:url(../images/icons_s4.png) -404px -75px no-repeat;}
+a.prev,
+.csslider a.prev{ background:url(../images/icons_s4.png) -426px -300px no-repeat}
+
+a.next,
+.csslider a.next{ background:url(../images/icons_s4.png) -465px -300px no-repeat}
+a.link-wishlist{ background:url(../images/icons_s4.png) -122px -208px no-repeat;}
+a.link-compare{ background:url(../images/icons_s4.png) -172px -208px no-repeat;  }
+.block-wishlist .link-cart, button.button.btn-cart{ background: url(../images/icons_s4.png) -72px -208px no-repeat;}
+.add-to-links li a:hover{box-shadow:0 0 5px #737272 ;
+-moz-box-shadow:0 0 5px #737272;
+-webkit-box-shadow: 0 0 5px #737272}
+.slider_special .csslider a.prev,
+.slider_special .csslider a.next{ background-color:#575758; border:1px solid #575758;  border-bottom:none}
+.slider_special .csslider a.prev:hover,
+.slider_special .csslider a.next:hover{ background-color:#878686; border:1px solid #878686; border-bottom:none}
+.ui-slider-tabs{ border-top:none}
+.ui-slider-tabs-list li{ }
+.wrapper.em-box-custom .page{ background:url(../images/bkg.jpg) center -36px repeat-x}
+.em-box-custom .bkg_footer_bottom{ background:url(../images/bkg.jpg) center bottom repeat-x; padding-bottom:40px}
+.em-box-custom .container_header_top{ background-image: url(../images/bkg.jpg); background-position:center -36px; background-repeat:repeat-x; padding-top:4px}
+.div_link-cart_inner .text_top_cart{ border-width:1px; padding-top:9px; padding-bottom:8px;}
+.home_category .title,
+.slider_container .slider_special .widget-title h2{ padding-right:20px; padding-left:20px}
+.footer_followus ul li span.title{ color:#fff; background:#eb1c8e;}
+.footer_followus ul li:hover span.title:before{border-bottom-color: #eb1c8e;}
+
+.footer address{ font-size:100%}
+.em_block-tag-cloud .block-content .actions a, .block .actions a, .my-account .view-all, .em_nav .menu-item-depth-1 a.cls_view, .cls_view{ font-size:100%; font-weight:600}
+.block-subscribe .title, .footer_links .title{ font-size:120%; text-transform:uppercase}
+.home_category .content h5{ text-transform:capitalize; font-size:140%}
+.cms-index-index .block.em_block-recent-post .block-content li.item a.post-title{ font-size:140%; text-transform:capitalize}
+.cms-index-index .em_block-recent-post, .home_blog{border-top:1px solid #eb1c8e}
+.home_blog .title span, .cms-index-index .em_block-recent-post .block-title span{color:#eb1c8e; font-weight:400}
+.payment_accept{ padding-top:5px}

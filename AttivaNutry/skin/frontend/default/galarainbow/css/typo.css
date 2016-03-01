@@ -1,0 +1,150 @@
+/* Gala Rainbow */
+font: /*BEGIN:general_font*/12px/1.35 Arial, Helvetica, sans-serif/*END:general_font*/;
+font:/*BEGIN:h1_font*/normal 22px/1.15 helvetica,arial,sans-serif /*END:h1_font*/;
+font:/*BEGIN:h2_font*/ normal 20px/1.25 helvetica,arial,sans-serif/*END:h2_font*/;
+font:/*BEGIN:h3_font*/normal 18px/1.35 helvetica,arial,sans-serif /*END:h3_font*/;
+font:/*BEGIN:h4_font*/normal 16px/1.35 helvetica,arial,sans-serif /*END:h4_font*/;
+font:/*BEGIN:h5_font*/normal 14px/1.35 helvetica,arial,sans-serif /*END:h5_font*/;
+font:/*BEGIN:h6_font*/normal 12px/1.35 helvetica,arial,sans-serif /*END:h6_font*/;
+
+/*Page*/
+background-color:/*BEGIN:p_bg_color*/#ffffff/*END:p_bg_color*/;
+background-image: /*BEGIN:page_bg_image*/url(../images/stripes/blank.gif)/*END:page_bg_image*/;
+background-position: /*BEGIN:page_bg_position*/0 0/*END:page_bg_position*/;
+background-repeat: /*BEGIN:page_bg_repeat*/repeat/*END:page_bg_repeat*/;
+
+/* Header */
+color:/*BEGIN:h_text_color*/#aaaaaa/*END:h_text_color*/; //text header
+color:/*BEGIN:h_text2_color*/#fb687b/*END:h_text2_color*/;// text hover/active
+color:/*BEGIN:h_text3_color*/#000000/*END:h_text3_color*/;// text title
+color:/*BEGIN:h_text4_color*/#000000/*END:h_text4_color*/;// text title cart ++++
+color:/*BEGIN:h_text5_color*/#000000/*END:h_text5_color*/;// text free account ++++
+
+border: 1px solid /*BEGIN:h_line_color*/#cfcfcf/*END:h_line_color*/
+border: 1px solid /*BEGIN:h_line2_color*/#6ad98a/*END:h_line2_color*/
+border: 1px solid /*BEGIN:h_line3_color*/#cfcfcf/*END:h_line3_color*/
+
+background-color:/*BEGIN:h_bg_color*/#ffffff/*END:h_bg_color*/;
+background-image: /*BEGIN:h_bg_image*/url(../images/stripes/blank.gif)/*END:h_bg_image*/;
+background-position: /*BEGIN:h_bg_position*/0 0/*END:h_bg_position*/;
+background-repeat: /*BEGIN:h_bg_repeat*/repeat/*END:h_bg_repeat*/;
+background-color:/*BEGIN:h_bg2_color*/#ffffff/*END:h_bg2_color*/;
+background-color:/*BEGIN:h_bg3_color*/#fafafa/*END:h_bg3_color*/; bkg search
+background-color:/*BEGIN:h_bg4_color*/#ffffff/*END:h_bg4_color*/; bkg title dropdown cart ++++
+/* Top Menu */
+background-color:/*BEGIN:tm_bg_color*/#fb687b/*END:tm_bg_color*/;
+background-color:/*BEGIN:tm_hover_bg_color*/#000000/*END:tm_hover_bg_color*/;
+color:/*BEGIN:tm_text_color*/#ffffff/*END:tm_text_color*/;
+color:/*BEGIN:tm_hover_text_color*/#ffffff/*END:tm_hover_text_color*/ ;
+font:/*BEGIN:tm_font*/normal 12px/1.35 helvetica,arial,sans-serif /*END:tm_font*/;
+border: 1px solid /*BEGIN:tm_line_color*/#f14c61/*END:tm_line_color*/
+border: 1px solid /*BEGIN:tm_line2_color*/#ffffff/*END:tm_line2_color*/
+
+/* Drop Menu */
+background:/*BEGIN:dm_bg_color*/#ffffff/*END:dm_bg_color*/;
+color:/*BEGIN:dm_text_color*/#555555/*END:dm_text_color*/; menu text 
+color:/*BEGIN:dm_text2_color*/#fb687b/*END:dm_text2_color*/; hover
+color:/*BEGIN:dm_text3_color*/#191919/*END:dm_text3_color*/; title dd menu
+font:/*BEGIN:dm_font*/13px/1.35 Arial, Helvetica, sans-serif/*END:dm_font*/;
+
+/* Body */
+background-color:/*BEGIN:bd_bg_color*/#ffffff/*END:bd_bg_color*/; 
+background-image: /*BEGIN:bd_bg_image*/url(../images/stripes/blank.gif)/*END:bd_bg_image*/;
+background-position:/*BEGIN:bd_bg_position*/0 0/*END:bd_bg_position*/;
+background-repeat:/*BEGIN:bd_bg_repeat*/repeat/*END:bd_bg_repeat*/;
+background-color:/*BEGIN:bd_bg2_color*/#000000/*END:bd_bg2_color*/;
+background-color:/*BEGIN:bd_bg3_color*/#fafafa/*END:bd_bg3_color*/
+background-color:/*BEGIN:bd_bg4_color*/#ffffff/*END:bd_bg4_color*/
+background-color:/*BEGIN:bd_bg5_color*/#ffffff/*END:bd_bg5_color*/ bkg title block+++
+
+
+color:/*BEGIN:bd_text_color*/#191919/*END:bd_text_color*/; // title block
+color:/*BEGIN:bd_text2_color*/#505050/*END:bd_text2_color*/; //body text
+color:/*BEGIN:bd_text3_color*/#a0a0a0/*END:bd_text3_color*/; //body text
+color:/*BEGIN:bd_text4_color*/#fb687b/*END:bd_text4_color*/; // hover
+color:/*BEGIN:bd_text5_color*/#ffffff/*END:bd_text5_color*/; //bkg title block tab
+color:/*BEGIN:bd_text6_color*/#6ad98a/*END:bd_text6_color*/; //in stock
+color:/*BEGIN:bd_text7_color*/#191919/*END:bd_text7_color*/; //title block++++
+color:/*BEGIN:bd_text8_color*/#191919/*END:bd_text8_color*/; //title tab++++++
+
+
+
+border: 1px solid /*BEGIN:bd_line_color*/#e6e6e6/*END:bd_line_color*/; border input
+border: 1px solid /*BEGIN:bd_line2_color*/#000000/*END:bd_line2_color*/; border title
+border: 1px solid /*BEGIN:bd_line3_color*/#e6e6e6/*END:bd_line3_color*/; border title tab++
+border: 1px solid /*BEGIN:bd_line4_color*/#000000/*END:bd_line4_color*/; border title block++
+
+
+box-shadow:/*BEGIN:bd_box_shadow*/ 0 0 5px #c4c4c3/*END:bd_box_shadow*/ ;
+-moz-box-shadow:/*BEGIN:bd_box_shadow*/ 0 0 5px rgba(196,196,195,1.00)/*END:bd_box_shadow*/ ;
+-webkit-box-shadow: /*BEGIN:bd_box_shadow*/0 0 5px rgba(196,196,195,1.00)/*END:bd_box_shadow*/ ;
+
+.arrow-box{ position: relative;}
+.arrow-box:after, .arrow-box:before{ width:0; height:0; content: ""; position: absolute; top:4px; left:5px }
+.arrow-box:before{ border: 3px solid transparent; border-left-color: #7c97bf;}
+
+border-radius:/*BEGIN:bd_rounded_corner*/0/*END:bd_rounded_corner*/;
+-webkit-border-radius: /*BEGIN:bd_rounded_corner*/0/*END:bd_rounded_corner*/;
+-moz-border-radius:/*BEGIN:bd_rounded_corner*/0/*END:bd_rounded_corner*/;
+
+/* Footer */
+background-color:/*BEGIN:f_bg_color*/#ffffff/*END:f_bg_color*/;
+background-image: /*BEGIN:f_bg_image*/url(../images/stripes/blank.gif)/*END:f_bg_image*/;
+background-position:/*BEGIN:f_bg_position*/0 0/*END:f_bg_position*/;
+background-repeat:/*BEGIN:f_bg_repeat*/repeat/*END:f_bg_repeat*/;
+background-color:/*BEGIN:f_bg2_color*/#eeeeee/*END:f_bg2_color*/;
+
+color:/*BEGIN:f_text_color*/#555555/*END:f_text_color*/; text
+color:/*BEGIN:f_text2_color*/#191919/*END:f_text2_color*/; text title
+color:/*BEGIN:f_text3_color*/#a0a0a0/*END:f_text3_color*/; text link
+color:/*BEGIN:f_text4_color*/#fb687b/*END:f_text4_color*/; title link
+border: 1px solid /*BEGIN:f_line_color*/#d2d2d2/*END:f_line_color*/;
+border: 1px solid /*BEGIN:f_line2_color*/#000000/*END:f_line2_color*/;
+
+
+
+
+/* Button */ 
+/* button add to cart*/
+background:/*BEGIN:btn1_bg_color*/#3f3f3f/*END:btn1_bg_color*/;
+color:/*BEGIN:btn1_text_color*/#ffffff/*END:btn1_text_color*/;
+border: 1px solid /*BEGIN:btn1_line_color*/ #000000/*END:btn1_line_color*/;
+font:/*BEGIN:btn1_font*/16px/1.35 Arial, Helvetica, sans-serif/*END:btn1_font*/;
+
+background:/*BEGIN:btn2_bg_color*/#90ecaa/*END:btn2_bg_color*/;
+color:/*BEGIN:btn2_text_color*/#ffffff/*END:btn2_text_color*/;
+border: 1px solid/*BEGIN:btn2_line_color*/#50db78/*END:btn2_line_color*/;
+font:/*BEGIN:btn2_font*/16px/1.35 Arial, Helvetica, sans-serif/*END:btn2_font*/;
+
+background:/*BEGIN:btn3_bg_color*/#ff7b8f/*END:btn3_bg_color*/;
+color:/*BEGIN:btn3_text_color*/#ffffff/*END:btn3_text_color*/;
+border: 1px solid/*BEGIN:btn3_line_color*/#ff2b4c/*END:btn3_line_color*/;
+font:/*BEGIN:btn3_font*/18px/1.35 Arial, Helvetica, sans-serif/*END:btn3_font*/;
+
+
+
+/*edit setting*/
+sua font chu tat ca store
+baby
+Dropdown Menu Text 2 Color: #c9006f
+Body Text 4 Color:#eb1c8e
+furniture
+Footer Line Color: #f2f3f4
+
+sport
+sua 2 button
+Header Background 3 Color: #c31100
+Header Line 3 Color: #000000
+Body Text 4 Color:  #c31100
+Footer Background 2 Color: #313131
+Footer Background Color: #000000
+
+electronic
+Body Text 4 Color:#0089ff
+
+sua text trong blog
+Gala Rainbow Home Category 
+Gala Rainbow Home Brand
+Gala Rainbow Footer Follow Us
+
+sua layout 2 right

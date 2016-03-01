@@ -1,0 +1,53 @@
+.icon{ background:url(../images/icons_s5.png) 0 0 no-repeat}
+.slider_special .csslider a.next{ background:url(../images/icons_s5.png) -404px -94px no-repeat}
+.slider_special .csslider a.prev{ background:url(../images/icons_s5.png) -404px -75px no-repeat;}
+a.prev,
+.csslider a.prev{ background:url(../images/icons_s5.png) -426px -300px no-repeat}
+
+a.next,
+.csslider a.next{ background:url(../images/icons_s5.png) -465px -300px no-repeat}
+a.link-wishlist{ background:url(../images/icons_s5.png) -122px -208px no-repeat;}
+a.link-compare{ background:url(../images/icons_s5.png) -172px -208px no-repeat;  }
+.icon-menu{ background:url(../images/icons_menu_s5.png) 23px 0 no-repeat}
+.m_icon1 .icon-menu{ background-position:25px 7px;}
+.m_icon2 .icon-menu{ background-position:26px -66px;}
+.m_icon3 .icon-menu{ background-position:21px -151px;}
+.m_icon4 .icon-menu{ background-position:29px -257px;}
+.m_icon5 .icon-menu{ background-position:21px -348px;}
+.m_icon6 .icon-menu{ background-position:22px -458px;}
+.m_icon7 .icon-menu{ background-position:27px -571px;}
+.m_icon8 .icon-menu{ background-position:12px -673px;}
+.m_icon9 .icon-menu{ background-position:22px -789px;}
+.m_icon10 .icon-menu{ background-position:25px -881px;}
+.block-wishlist .link-cart, button.button.btn-cart{ background: url(../images/icons_s5.png) -72px -208px no-repeat;}
+.add-to-links li a:hover{box-shadow:0 0 5px #737272 ;
+-moz-box-shadow:0 0 5px #737272;
+-webkit-box-shadow: 0 0 5px #737272}
+.slider_special .csslider a.prev{ border:none}
+.slider_special .csslider a.prev:hover{ background-color:#878686;}
+
+.slider_special .csslider a.next{ border:none}
+.slider_special .csslider a.next:hover{ background-color:#878686;}
+
+.ui-slider-tabs{ border-top:none}
+.ui-slider-tabs-list li{ }
+
+.home_category .title,
+.slider_container .slider_special .widget-title h2{ padding-right:20px; padding-left:20px}
+.footer_followus ul li span.title{ color:#fff; background:#0089ff;}
+.footer_followus ul li:hover span.title:before{border-bottom-color: #0089ff;}
+.block-wishlist .link-cart:hover, button.button.btn-cart:hover {
+box-shadow: 0 0 5px #0089ff;
+-moz-box-shadow: 0 0 5px #0089ff;
+-webkit-box-shadow: 0 0 5px #0089ff;
+}
+
+
+.nav-container, 
+.em_nav, 
+.em-box-custom .container_menu{ background-image:url(../images/bkg-menu-shadow.png); background-position:center bottom; background-repeat: repeat-x}
+.bkg_container_menu{ background:none}
+.em_block-tag-cloud .block-content .actions a, .block .actions a, .my-account .view-all, .em_nav .menu-item-depth-1 a.cls_view, .cls_view{ font-size:100%; font-weight:600}
+.block-subscribe .title, .footer_links .title{ font-size:120%; text-transform:uppercase}
+.home_category .content h5{ text-transform:capitalize; font-size:140%}
+.cms-index-index .block.em_block-recent-post .block-content li.item a.post-title{ font-size:140%; text-transform:capitalize}

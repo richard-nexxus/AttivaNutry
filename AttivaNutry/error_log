@@ -1,0 +1,1 @@
+[30-Sep-2015 20:16:29 UTC] PHP Fatal error:  Allowed memory size of 33554432 bytes exhausted (tried to allocate 20321 bytes) in /home/attivanutry/public_html/app/code/local/EM/Themeframework/Helper/Theme.php on line 132
